@@ -3,67 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje první stránka</title>
+    <title>ZaoChen | Domů</title>
     <style>
+        /* Sjednocení stylu s kontakty */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
+
         header {
-            background: #333;
-            color: white;
+            background: #2c3e50; /* Tmavě modrá jako v kontaktech */
+            color: #ffffff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e; /* Mírně světlejší modrá pro menu */
             padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        nav {
-            background: #555;
-            padding: 10px;
-            text-align: center;
-        }
+
         nav a {
             color: white;
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #3498db; /* Světle modrá při najetí myší */
         }
-        main {
-            padding: 20px;
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 40px 20px;
+            background: white;
+            min-height: 60vh;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
+        main h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
         footer {
-            background: #333;
-            color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            position: relative; /* Fixed v původním kódu překrýval obsah */
             width: 100%;
+        }
+
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Vítej stránce společnosti ZaoCheng </h1>
+    <h1>Vítejte u společnosti <span class="highlight">ZaoChen</span></h1>
+    <p>Tradice a pohodlí již od roku 1978</p>
 </header>
 
 <nav>
-    <a href="#">Domů</a>
+    <a href="index.html">Domů</a>
     <a href="#">O mně</a>
-    <a href="test.html">Kontakt</a>
-</nav>
+    <a href="test.html">Kontakt</a> </nav>
 
-<main>
-    <h2>Úvod</h2>
-    <p>ZaoChen byla vytvořena za ůčelem zlepšit pohodlý na záchodě</p>
-    <p>Firma Zaochen byla vytvořena roku 1978 podnikately Ing. Arcadius Madaj a Bc. Štěpán lapka </p>
-    <p>Prvním výrobkem, který tato firma vytvořila byl vyhžívaný záchod</p>
-</main>
+<div class="container">
+    <main>
+        <h2>Úvod do světa pohodlí</h2>
+        <p>ZaoChen byla vytvořena za účelem zlepšit <strong>pohodlí na záchodě</strong>.</p>
+        
+        <p>Firma ZaoChen byla založena roku 1978 vizionářskými podnikateli <span class="highlight">Ing. Arcadiusem Madajem</span> a <span class="highlight">Bc. Štěpánem Lapkou</span>.</p>
+        
+        <p>Prvním revolučním výrobkem, který tato firma uvedla na trh, byl náš legendární <strong>vyhřívaný záchod</strong>, který změnil standardy osobní hygieny.</p>
+    </main>
+</div>
 
 <footer>
-    <p>&copy; 2026 Moje stránka</p>
+    <p>&copy; 2026 zaochen.online | Všechna práva vyhrazena</p>
+</footer>
+
+</body>
+</html>
 </footer>
 
 </body>
