@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakty | zaochen.online</title>
+    <title>ZaoChen | Kontakt</title>
     <style>
-        /* Základní styly pro moderní vzhled */
+        /* VEŠKERÝ VZHLED JE TADY - ŽÁDNÝ EXTERNÍ CSS SOUBOR NENÍ POTŘEBA */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -22,6 +22,27 @@
             text-align: center;
         }
 
+        /* Styl navigace shodný s index.html */
+        nav {
+            background: #34495e;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
         .container {
             width: 80%;
             margin: auto;
@@ -36,8 +57,7 @@
             margin-top: 30px;
         }
 
-        /* Levý sloupec - Informace */
-        .contact-info {
+        .contact-info, .contact-form {
             flex: 1;
             min-width: 300px;
             background: #fff;
@@ -46,20 +66,10 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .contact-info h2 {
+        h2 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
-        }
-
-        /* Pravý sloupec - Formulář */
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .form-group {
@@ -76,7 +86,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Důležité pro šířku */
+            box-sizing: border-box;
         }
 
         button {
@@ -87,18 +97,11 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            width: 100%;
         }
 
         button:hover {
             background: #2980b9;
-        }
-
-        /* Mapa */
-        .map-container {
-            margin-top: 30px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         footer {
@@ -108,61 +111,61 @@
             color: white;
             margin-top: 40px;
         }
+
+        .highlight {
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html">Domů</a>
     <a href="#">O mně</a>
     <a href="test.html">Kontakt</a>
 </nav>
+
 <header>
-    <h1>Kontaktujte nás</h1>
-    <p>Jsme tu pro vás. Ozvěte se nám!</p>
+    <h1>Kontaktujte <span class="highlight">ZaoChen</span></h1>
+    <p>Jsme tu pro vaše maximální pohodlí</p>
 </header>
 
 <div class="container">
     <div class="contact-wrapper">
         
         <div class="contact-info">
-            <h2>Kontaktní údaje</h2>
-            <p><strong>📍 Adresa:</strong><br>Ulice 123, 110 00 Praha</p>
-            <p><strong>📞 Telefon:</strong><br><a href="tel:+420123456789">+420 123 456 789</a></p>
-            <p><strong>✉️ E-mail:</strong><br><a href="mailto:info@zaochen.online">info@zaochen.online</a></p>
-            <p><strong>⏰ Provozní doba:</strong><br>Po - Pá: 9:00 - 17:00</p>
+            <h2>Kde nás najdete</h2>
+            <p><strong>📍 Sídlo firmy:</strong><br>Vývojové centrum ZaoChen<br>110 00 Praha</p>
+            <p><strong>✉️ E-mail:</strong><br>info@zaochen.online</p>
+            <p><strong>👤 Vedení:</strong><br>Ing. Arcadius Madaj<br>Bc. Štěpán Lapka</p>
+            <hr>
+            <p><em>"Vytváříme teplo tam, kde ho nejvíc potřebujete."</em></p>
         </div>
 
         <div class="contact-form">
             <h2>Napište nám</h2>
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="name">Jméno a příjmení</label>
-                    <input type="text" id="name" name="name" placeholder="Vaše jméno..." required>
+                    <label>Jméno</label>
+                    <input type="text" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Váš e-mail..." required>
+                    <label>E-mail</label>
+                    <input type="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Zpráva</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Jak vám můžeme pomoci?" required></textarea>
+                    <label>Vaše zpráva</label>
+                    <textarea name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit">Odeslat zprávu</button>
+                <button type="submit">Odeslat dotaz</button>
             </form>
         </div>
 
     </div>
-
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.846313753641!2d14.4158143!3d50.0835494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ec19409893%3A0xf69566270503612a!2zU3Rhcm9tw6tzdHNrw6kgbsOhbcSbc3TDrQ!5e0!3m2!1scs!2scz!4v1711730000000!5m2!1scs!2scz" 
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-    </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 zaochen.online | Všechna práva vyhrazena</p>
+    <p>&copy; 2026 zaochen.online | Společnost založená roku 1978</p>
 </footer>
 
 </body>
