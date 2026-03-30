@@ -5,99 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZaoChen | Kontakt</title>
     <style>
-        /* VEŠKERÝ VZHLED JE TADY - ŽÁDNÝ EXTERNÍ CSS SOUBOR NENÍ POTŘEBA */
+        /* --- KOMPLETNÍ STYLIZACE (VŠE V JEDNOM) --- */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f0f2f5; /* Světle šedé pozadí */
+            color: #1a1a1a;
         }
 
-        header {
-            background: #2c3e50;
-            color: #ffffff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        /* Styl navigace shodný s index.html */
+        /* Navigace - stejná jako na index.html */
         nav {
-            background: #34495e;
-            padding: 15px;
+            background: #2c3e50; /* Tmavě modrá */
+            padding: 1rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #ffffff;
+            margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #3498db;
+            color: #3498db; /* Světle modrá při najetí */
+        }
+
+        header {
+            background: #34495e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 1000px;
+            margin: 30px auto;
             padding: 20px;
         }
 
-        .contact-wrapper {
+        /* Rozvržení kontaktů a formuláře */
+        .flex-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 30px;
         }
 
-        .contact-info, .contact-form {
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             flex: 1;
             min-width: 300px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         h2 {
             color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            margin-top: 0;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+            padding-bottom: 5px;
         }
 
+        /* Styly formuláře */
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .form-group label {
+        label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: bold;
         }
 
-        .form-group input, .form-group textarea {
+        input, textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 16px;
             box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
         }
 
         button {
             background: #3498db;
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
+            padding: 14px 25px;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             width: 100%;
+            transition: background 0.3s;
         }
 
         button:hover {
@@ -106,67 +120,66 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background: #2c3e50;
             color: white;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
-        .highlight {
-            color: #3498db;
-        }
+        .blue-text { color: #3498db; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Domů</a>
-    <a href="#">O mně</a>
-    <a href="test.html">Kontakt</a>
-</nav>
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="#">O mně</a>
+        <a href="test.html">Kontakt</a>
+    </nav>
 
-<header>
-    <h1>Kontaktujte <span class="highlight">ZaoChen</span></h1>
-    <p>Jsme tu pro vaše maximální pohodlí</p>
-</header>
+    <header>
+        <h1>Kontaktujte <span class="blue-text">ZaoChen</span></h1>
+        <p>Expert na vyhřívané pohodlí od roku 1978</p>
+    </header>
 
-<div class="container">
-    <div class="contact-wrapper">
-        
-        <div class="contact-info">
-            <h2>Kde nás najdete</h2>
-            <p><strong>📍 Sídlo firmy:</strong><br>Vývojové centrum ZaoChen<br>110 00 Praha</p>
-            <p><strong>✉️ E-mail:</strong><br>info@zaochen.online</p>
-            <p><strong>👤 Vedení:</strong><br>Ing. Arcadius Madaj<br>Bc. Štěpán Lapka</p>
-            <hr>
-            <p><em>"Vytváříme teplo tam, kde ho nejvíc potřebujete."</em></p>
+    <div class="container">
+        <div class="flex-row">
+            
+            <div class="card">
+                <h2>Kde nás najdete</h2>
+                <p><strong>📍 Adresa:</strong><br>Vývojové centrum ZaoChen<br>Praha, Česká republika</p>
+                <p><strong>✉️ E-mail:</strong><br><a href="mailto:info@zaochen.online" style="color: #3498db;">info@zaochen.online</a></p>
+                <p><strong>🏢 Vedení:</strong><br>Ing. Arcadius Madaj<br>Bc. Štěpán Lapka</p>
+                <div style="background: #f9f9f9; padding: 15px; border-left: 5px solid #3498db; margin-top: 20px;">
+                    <em>"Náš vyhřívaný záchod není jen produkt, je to životní styl."</em>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Napište nám</h2>
+                <form action="https://formspree.io/f/MOU_ID_FORMULAR" method="POST">
+                    <div class="form-group">
+                        <label for="jmeno">Vaše jméno</label>
+                        <input type="text" id="jmeno" name="name" placeholder="Např. Jan Novák" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Váš e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="email@seznam.cz" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zprava">Vaše zpráva</label>
+                        <textarea id="zprava" name="message" rows="5" placeholder="S čím vám můžeme pomoci?" required></textarea>
+                    </div>
+                    <button type="submit">Odeslat zprávu</button>
+                </form>
+            </div>
+
         </div>
-
-        <div class="contact-form">
-            <h2>Napište nám</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label>Jméno</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Vaše zpráva</label>
-                    <textarea name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Odeslat dotaz</button>
-            </form>
-        </div>
-
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2026 zaochen.online | Společnost založená roku 1978</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 ZaoChen | Spoluzakladatelé Madaj & Lapka</p>
+    </footer>
 
 </body>
 </html>
