@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás | ZaoChen</title>
+    <style>
+        /* --- JEDNOTNÝ STYL PRO CELÝ WEB --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Navigace shodná s index.html a test.html */
+        nav {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        header {
+            background: #34495e;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .timeline {
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .year {
+            font-weight: bold;
+            color: #3498db;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid #2c3e50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .blue-text { color: #3498db; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="o-mne.html">O nás</a>
+        <a href="test.html">Kontakt</a>
+    </nav>
+
+    <header>
+        <h1>Příběh značky <span class="blue-text">ZaoChen</span></h1>
+        <p>Od garážového nápadu k revoluci v pohodlí</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Naše vize</h2>
+            <p>Věříme, že technologie by měly sloužit lidem v těch nejintimnějších chvílích. Naším cílem je, aby se každý cítil jako král, i když je zrovna na svém „trůnu“.</p>
+        </section>
+
+        <section>
+            <h2>Historie v datech</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="year">1978</span>
+                    <p><strong>Ing. Arcadius Madaj</strong> a <strong>Bc. Štěpán Lapka</strong> zakládají dílnu v Praze. První prototyp vyhřívaného sedátka byl napájen autobaterií.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">1985</span>
+                    <p>ZaoChen získává patent na "Termo-keramický izolační systém", který udržuje teplotu s přesností na 0,1 °C.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2026</span>
+                    <p>Spouštíme web <strong>zaochen.online</strong> a vstupujeme do digitální éry s novou generací chytrých doplňků.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kdo stojí za kormidlem</h2>
+            <div class="profile-section">
+                <div class="profile-card">
+                    <h3>Ing. Arcadius Madaj</h3>
+                    <p><em>Technický vizionář</em></p>
+                    <p>Génius přes elektroniku, který věří, že zima je největším nepřítelem lidstva.</p>
+                </div>
+                <div class="profile-card">
+                    <h3>Bc. Štěpán Lapka</h3>
+                    <p><em>Strategický mozek</em></p>
+                    <p>Odborník na ergonomii a pohodlí, díky kterému naše produkty padnou každému.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ZaoChen | Vyrobeno s láskou k
