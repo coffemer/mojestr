@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ZaoChen – ukázková nabídka WC a koupelnového vybavení.">
+<title>Nabídka | ZaoChen</title>
+<style>
+:root{--navy:#2c3e50;--slate:#34495e;--blue:#3498db;--page:#f4f4f9;--text:#333}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;margin:0;background:var(--page);color:var(--text)}
+nav{background:var(--navy);padding:15px 20px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.1)}
+nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;display:inline-block}
+nav a:hover,nav a:focus{color:var(--blue)}
+header{background:var(--slate);color:white;padding:60px 20px;text-align:center}
+header h1{font-size:clamp(2rem,5vw,3rem);margin:0 0 10px}
+header p{margin:0;font-size:1.1rem}
+.blue-text{color:var(--blue)}
+.container{max-width:1100px;margin:40px auto;padding:28px;background:white;border-radius:8px;box-shadow:0 2px 15px rgba(0,0,0,.1)}
+h2{color:var(--navy);border-bottom:2px solid var(--blue);padding-bottom:10px}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:24px}
+.product-card{background:#f9f9f9;border-radius:8px;overflow:hidden;border-top:4px solid var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;flex-direction:column}
+.product-card img{width:100%;height:225px;object-fit:cover;display:block;background:#e8edf1}
+.product-info{padding:19px;display:flex;flex-direction:column;flex:1}
+.product-info h3{color:var(--navy);margin:0 0 8px}
+.product-info p{margin:0 0 14px}
+.price{color:var(--blue);font-size:1.45rem;font-weight:800;margin-top:auto}
+.tag{display:inline-block;align-self:flex-start;background:#e8f4fc;color:#216a98;border-radius:20px;padding:3px 10px;font-size:.82rem;font-weight:bold;margin-bottom:10px}
+.note{background:#f4f8fb;border-left:4px solid var(--blue);padding:14px 18px;margin-top:28px;border-radius:0 6px 6px 0}
+.contact{text-align:center;margin-top:38px;padding:25px;background:#f9f9f9;border-radius:8px}
+.contact a{display:inline-block;background:var(--navy);color:white;padding:10px 18px;border-radius:5px;text-decoration:none;font-weight:bold}
+.contact a:hover{background:var(--blue)}
+footer{text-align:center;padding:20px;background:var(--navy);color:white;margin-top:40px}
+footer p{margin:0}
+@media(max-width:850px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.container{margin:22px 14px;padding:22px}}
+@media(max-width:560px){nav{padding:10px}nav a{margin:5px 8px}header{padding:42px 16px}.product-grid{grid-template-columns:1fr}.product-card img{height:240px}.container{padding:18px}}
+</style>
+</head>
+<body>
+<nav aria-label="Hlavní navigace">
+<a href="index.html">Domů</a>
+<a href="aboutus.html">O nás</a>
+<a href="nabidka.html" aria-current="page">Nabídka</a>
+<a href="test.html">Kontakt</a>
+</nav>
+<header>
+<h1>Naše nabídka <span class="blue-text">ZaoChen</span></h1>
+<p>Moderní WC, pohodlí a styl pro každou koupelnu</p>
+</header>
+<main class="container">
+<section>
+<h2>Vyberte si svůj nový trůn</h2>
+<p>Připravili jsme ukázkovou nabídku tří modelů, které spojují čistý design s každodenní praktičností. Uvedené produkty a ceny jsou zatím demonstrační a slouží jako ukázka vzhledu e-shopu.</p>
+</section>
+<section aria-labelledby="produkty">
+<h2 id="produkty">Oblíbené modely</h2>
+<div class="product-grid">
+<article class="product-card">
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Ukázka moderně zařízené koupelny" loading="lazy">
+<div class="product-info"><span class="tag">Základní model</span><h3>ZaoChen Classic</h3><p>Klasické keramické WC s jednoduchým vzhledem, které se hodí do většiny koupelen.</p><div class="price">4 990 Kč</div></div>
+</article>
+<article class="product-card">
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Moderní koupelna v minimalistickém stylu" loading="lazy">
+<div class="product-info"><span class="tag">Nejprodávanější</span><h3>ZaoChen Comfort</h3><p>Závěsný design pro vzdušnější koupelnu a snadnější úklid podlahy.</p><div class="price">7 490 Kč</div></div>
+</article>
+<article class="product-card">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Elegantní moderní interiér koupelny" loading="lazy">
+<div class="product-info"><span class="tag">Prémiový model</span><h3>ZaoChen Smart</h3><p>Luxusně laděný model pro zákazníky, kteří chtějí koupelně dodat moderní vzhled.</p><div class="price">12 990 Kč</div></div>
+</article>
+</div>
+<p class="note"><strong>Upozornění:</strong> Jde o ukázkový katalog. Ceny, názvy modelů a popisy nejsou skutečnou obchodní nabídkou. Fotografie jsou ilustrační a mohou zobrazovat celou koupelnu, nikoli samotný produkt.</p>
+</section>
+<section class="contact">
+<h2>Potřebujete poradit?</h2><p>Kontaktujte nás a společně najdeme řešení pro vaši koupelnu.</p><a href="test.html">Přejít na kontakt</a>
+</section>
+</main>
+<footer><p>&copy; 2026 ZaoChen | Vyrobeno s láskou k pohodlí.</p></footer>
+</body>
+</html>
